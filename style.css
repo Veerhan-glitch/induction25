@@ -145,7 +145,7 @@ header {
     max-width: 500px;
     margin-top: 5vh;
     height: auto;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .description {
@@ -204,15 +204,10 @@ header {
 .keynote-speakers-page .greet-keynote-speakers-text {
     position: relative;
     width: 60vw;
-    margin-top: 1rem;
+    margin: 1rem auto 0 auto;
     font-size: 1.2rem;
     text-align: center;
 }
-
-
-
-
-
 
 
 
@@ -419,6 +414,9 @@ header {
     font-size: x-large;
 }
 
+.inline-names {
+    white-space: nowrap;
+}
 
 
 .image-wrapper {
