@@ -50,7 +50,11 @@ header {
     gap: 1vw;
     font-size: 1rem;
 }
-
+.schedule {
+    font-size: 0.9rem;
+    flex-shrink: 1;
+    white-space: nowrap;
+}
 
 
 .home {
@@ -383,15 +387,28 @@ header {
     font-weight: bold;
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer-social to bottom */
+    min-height: 200px; /* Or however tall your footer needs to be */
+    padding: 20px;
+    color: white;
+    background-color: #0B0B0B;
+    background-image: url('Images/bg-about-footer.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .footer-social {
     display: flex;
     gap: 10px;
-    position: relative;
-    top: 4vh;
-    /* left: 9vw; */
-    width: 28vw;
     justify-content: center;
+    margin-top: auto;
+    padding-top: 1rem;
 }
+
 
 .footer-social a img {
     width: 24px;
@@ -606,8 +623,8 @@ header {
     }
 
     .footer-social {
-        top: 15vh;
-    }
+    margin-top: auto;
+    padding-top: 1rem;    }
 
     .footer-content .footer-image .induction-25 {
         left: 2vw;
@@ -683,5 +700,17 @@ header {
 
     .hover-text .designation {
         font-size: 0.75rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .schedule {
+        font-size: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    header {
+        padding: 0 10px;
     }
 }
