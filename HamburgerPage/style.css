@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  font-family: sans-serif;
+}
+
+.hamburgerPage-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cross-sign {
+  height: 5vh;
+  padding: 10px;
+}
+
+.cross-sign i {
+  font-size: xx-large;
+  color: #787878;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  height: 95vh;
+}
+
+/* Left Side Layout */
+.main-left-side {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 10vh;
+  margin-left: 5vw;
+}
+
+.main-left-side a {
+  text-decoration: none;
+}
+
+/* Menu Item Sizes */
+.getintouch {
+  width: 60%;
+  margin-bottom: 10vh;
+}
+
+.contactHamburger {
+  width: 40%;
+  margin-bottom: 10vh;
+}
+
+
+.scheduleHamburger {
+  width: 50%;
+  margin-bottom: 10vh;
+}
+
+/* Right Side Logo at Top */
+.main-right-side {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 4vh 5vw 0 0;
+}
+
+.logo {
+  width: 15vw;
+  height: auto;
+}
+
+/* 🟢 Smooth Hover Animation */
+.menu-img {
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-img:hover {
+  transform: scale(1.08);
+  opacity: 0.95;
+}

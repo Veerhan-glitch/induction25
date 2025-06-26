@@ -1,0 +1,413 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#1E1E1E ;
+    font-family: 'Teachers', sans-serif;
+}
+
+
+
+
+.home{
+    margin-top: 60px;
+  height: auto;
+  min-height: calc(100vh - 60px);    background-image: url('../Images/bg-about-footer.png');
+    background-position: center;
+    background-size: cover;
+
+}
+.top-left-logo {
+  position: absolute;
+  top: -10px;
+  /* left: 20px; */
+  width: 9vw;  /* adjust as needed */
+  height: auto;
+  z-index: 0;    /* behind everything else */
+}
+
+    .top-container {
+        margin:0 5vw;
+      display: flex;
+      padding: 40px;
+      gap: 40px;
+      flex-wrap: wrap;
+        justify-content: space-between; /* This adds the spacing */
+    }
+
+    .left-image {
+      flex: 1;
+    width: 50vw;
+    height: 30vw;
+    }
+
+    .left-image img {
+    width: 100%;
+    height:100%;
+      display: block;
+    }
+
+    .right-map {
+        margin-left: 5vh;
+      flex: 2;
+    width: 50vw;
+    height: 30vw;
+
+    }
+
+    .right-map iframe {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    }
+
+.info-boxes {
+  display: flex;
+  justify-content: center; /* centers the columns */
+  gap: 80px;               /* increased spacing between columns */
+  padding: 40px;
+  flex-wrap: wrap;
+  text-align: center;      /* optional: center-align text inside columns */
+    max-width: 90vw;
+  margin: 0 auto;
+}
+
+
+.info-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.info-column h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.info-column p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+.contacts-container {
+        background-image: url('images/contactbg.png');
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 100%;
+  background-color: #f5e6d8;
+  color: #000;
+  padding: 40px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  min-height: calc(100vh - 60px);
+  padding: 30px;
+}
+
+
+.two-col-container {
+  width: 50vw; /* adjust as needed */
+}
+
+.row {
+  display: flex;
+  margin-bottom: 12px;
+  
+}
+
+.left {
+  width: 23vw;        /* fixed width for left column */
+  text-align: right;   /* push text to the right edge */
+  padding-right: 2vw; /* gap between columns */
+  font-weight: bold;
+}
+
+.right {
+  flex: 1;             /* take remaining space */
+  text-align: left;
+}
+
+
+
+
+/* The white box containing the note text */
+.note-box {
+  background: white;
+  border: 1px solid #999;
+  padding: 10px 15px;
+  font-size: 14px;
+  max-width: 360px;      /* adjust width as desired */
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  line-height: 1.4;
+  background-color: rgba(0,0,0,0);
+
+}
+
+/* Wraps left image, two-col block, and right image */
+.content-row {
+  display: flex;
+  justify-content: center;  /* centers the three items as a group */
+  align-items: flex-start;  /* align top edges */
+  gap: 5vw;                /* horizontal space between images and block */
+}
+
+/* Styles for the side images */
+.side-img {
+  width: 15vw;   /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .reach-campus-section {
+      background-image: url('../Images/bg-about-footer.png');
+    background-position: center;
+    background-size: cover;
+  padding-left:7vw;
+  padding-right:7vw;
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+.reach-text {
+  width: 60%;
+  padding-top: 40px; /* Align with .reach-title */
+}
+
+.reach-title {
+  width: 40%;
+  padding-top: 40px; /* Same top as .reach-text */
+  font-size: 3rem;
+  line-height: 1;
+  text-align: right;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.reach-title span {
+  color: white;
+}
+
+.rocket-img {
+  bottom: 60px; /* Final bottom alignment */
+  right: 40px;
+  height: 40vh;
+  opacity: 1;
+}
+
+.reach-text .Direction{
+  /* font-size: 1.2rem; */
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  padding: 8px 16px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent; /* no fill */
+}
+
+
+
+
+.virtual-tour {
+  background: #FFEBDA url('images/virtual-tour-bg.png') no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 2vw;
+  text-align: center;
+  color: black;
+  height: auto;
+  min-height: calc(100vh - 60px);  gap: 5vh;
+}
+
+h1{
+  font-size: 5rem; /* responsive scaling */
+  font-weight: 900;
+  margin-bottom: 5vh;
+  letter-spacing: -0.5px;
+}
+
+.videos {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  flex-wrap: wrap;
+  max-width: 90vw;
+}
+
+.videos iframe {
+  width: clamp(400px, 40vw, 560px);
+  height: calc(clamp(400px, 40vw, 560px) * 9 / 16); /* maintain 16:9 aspect ratio */
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+/* Keep your existing styles as is */
+
+/* Responsive stacking on small screens */
+@media (max-width: 768px) {
+  /* .top-left-logo{
+    width: 2vw;
+  } */
+  .home{
+    height: auto;
+
+  }
+  .top-container {
+    flex-direction: column;  /* stack left-image and right-map vertically */
+    padding: 20px;
+    gap: 20px;
+  }
+  .left-image{
+    margin-top: 0;
+  }
+  .right-map {
+    width: 100%; /* full width */
+  aspect-ratio: 16 / 9; /* or any ratio you want */
+    margin: auto;
+  }
+
+  .info-boxes {
+    flex-direction: column; /* stack info columns vertically */
+    gap: 30px;
+    max-width: 90vw;
+    padding: 20px;
+  }
+
+  .info-column {
+    min-width: auto;  /* remove min-width so it can shrink */
+    width: 100%;      /* take full width */
+  }
+
+
+  .reach-campus-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+
+
+  .contacts-container {
+    height: auto;
+    padding: 20px;
+  }
+  .two-col-container {
+    width: 100%; /* full width on small screens */
+  }
+  .row {
+    flex-direction: column; /* stack left and right vertically */
+    align-items: center;    /* center align text */
+  }
+  .left {
+    width: 100%; /* full width */
+    text-align: center; /* center align text */
+    padding-right: 0; /* remove right padding */
+    margin-bottom: 10px; /* space between rows */
+  }
+  .right {
+    width: 100%; /* full width */
+    text-align: center; /* center align text */
+  }
+  .note-box {
+    max-width: 100%; /* full width on small screens */
+    margin: 0 auto; /* center align */
+  }
+  .content-row {
+    flex-direction: column; /* stack left image, two-col block, and right image vertically */
+    align-items: center;    /* center align all items */
+    gap: 20px;              /* vertical space between items */
+  }
+  .left-image {
+    width: 80vw; /* full width on small screens */
+    height: auto; /* maintain aspect ratio */
+  }
+  .left-image img {
+    width: 100%; /* full width */
+    height: auto; /* maintain aspect ratio */
+  }
+  .side-img {
+    display: none;
+  }
+
+
+  h1 {
+    order: 0;  /* Show first */
+    width: 90vw;
+        margin: 0;
+    text-align: center;
+  font-size: 2rem;
+  }
+
+  .reach-text {
+    padding: 0;
+    order: 1;  /* Show second */
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Hide the rocket image on small screens */
+  .rocket-img {
+    display: none;
+  }
+  .virtual-tour{
+    height:auto;
+  }
+}
+
+
+

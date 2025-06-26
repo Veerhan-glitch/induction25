@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburger Menu</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hamburgerPage-container">
+    <!-- Top cross icon -->
+<!-- Top cross icon (pure JS back) -->
+<div class="cross-sign">
+  <a href="javascript:void(0);" onclick="history.back();">
+    <i class="fa-solid fa-xmark"></i>
+  </a>
+</div>
+
+
+
+
+    <!-- Main layout -->
+    <div class="main-container">
+      <!-- Left Side Menu -->
+      <div class="main-left-side">
+        <a href="../Contact Page/index.html">
+          <img src="Images/touch.png" alt="Get in Touch" class="menu-img getintouch" />
+        </a>
+        <!-- <a href="#">
+          <img src="Images/contacts.png" alt="Contacts" class="menu-img contactHamburger" />
+        </a> -->
+
+        <a href="../schedule/index.html">
+          <img src="Images/schedule.png" alt="Schedule" class="menu-img scheduleHamburger" />
+        </a>
+      </div>
+
+      <!-- Right Side Logo -->
+      <div class="main-right-side">
+        <img src="Images/logo.png" alt="Logo" class="logo" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Set referrer link -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const backLink = document.getElementById('backLink');
+      backLink.href = document.referrer || '../index.html';
+    });
+  </script>
+</body>
+</html>
