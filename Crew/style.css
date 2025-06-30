@@ -13,7 +13,7 @@ body {
 #meet-the-crew-section {
   padding-top: 70px; /* space for site header */
   text-align: center;
-  height: calc(100vh - 60px); /* fill rest of screen */
+  height: calc(120vh - 60px); /* fill rest of screen */
   display: flex;
   flex-direction: column;
   align-items: center;
