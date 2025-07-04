@@ -1,0 +1,65 @@
+body {
+  background-image: url("./bg.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Section container */
+#meet-the-crew-section {
+  padding-top: 70px; /* space for site header */
+  text-align: center;
+  height: calc(120vh - 60px); /* fill rest of screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading image */
+.crew-heading-image {
+  max-width: 90%;
+  height: auto;
+  max-height: 10vh;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Scroll container */
+.crew-scroll-container {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.crew-scroll-container::-webkit-scrollbar {
+  display: none;  /* Chrome/Safari */
+}
+
+/* Scrollable crew image */
+.crew-scroll-image {
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  object-fit: contain;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .crew-heading-image {
+    max-width: 80%;
+    max-height: 10vh;
+  }
+
+  .crew-scroll-image {
+    height: 100%;
+  }
+}
