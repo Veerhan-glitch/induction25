@@ -43,13 +43,18 @@
   </div>
 </section>
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const scrollContainer = document.querySelector('.crew-scroll-container');
-    if (scrollContainer) {
-      scrollContainer.scrollLeft = 70;
-    }
-  });
+window.addEventListener('DOMContentLoaded', () => {
+  const scrollContainer = document.querySelector('.crew-scroll-container');
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  if (scrollContainer && isMobile) {
+    scrollContainer.scrollLeft = 30;
+  }
+});
+
 </script>
+<button class="scroll-arrow left">&#10094;</button>
+<button class="scroll-arrow right">&#10095;</button>
 
 
       <footer class="footer">
@@ -123,5 +128,29 @@
         </div>
       </div>
     </footer>
+    <script>
+window.addEventListener('DOMContentLoaded', () => {
+  const scrollContainer = document.querySelector('.crew-scroll-container');
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  if (scrollContainer && isMobile) {
+    scrollContainer.scrollLeft = 30;
+  }
+
+  const leftBtn = document.querySelector('.scroll-arrow.left');
+  const rightBtn = document.querySelector('.scroll-arrow.right');
+
+  const scrollAmount = 470;
+
+  leftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+});
+</script>
+
 </body>
 </html>

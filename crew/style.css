@@ -63,3 +63,43 @@ body {
     height: 100%;
   }
 }
+.crew-scroll-container {
+  scroll-snap-type: x mandatory;
+}
+
+.crew-scroll-image {
+  scroll-snap-align: center;
+  padding: 0 10px; /* spacing between images */
+}
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.scroll-arrow.left {
+  left: 10px;
+}
+
+.scroll-arrow.right {
+  right: 10px;
+}
+
+/* Make sure the section is relatively positioned */
+#meet-the-crew-section {
+  position: relative;
+}

@@ -1,12 +1,173 @@
-body {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
-  background: black;
+  box-sizing: border-box;
 }
 
-.full-image {
-  /* margin-top:60px ; */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Body Styling with background image */
+body {
+  font-family: 'Teachers', sans-serif;
+  color: white;
+  background-image: url("IMAGES/laptop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 64px; /* space for fixed nav */
+}
+
+.top-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 12px 32px;
+  position: fixed;
+  top: 56px;
+  left: 0;
   width: 100%;
+  z-index: 10;
+}
+
+.top-nav button {
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#day-label {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #FFD700;
+}
+
+
+#day-label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #FFD700; /* secondary accent (subtitle) */
+}
+
+/* Heading image */
+.heading-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.heading-img {
+  width: 90%;
+  max-width: 700px;
   height: auto;
-  display: block;
+}
+
+/* Schedule boxes */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+}
+
+.outer-schedule-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 10px;
+}
+
+.schedule-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #94c7d7; /* electric cyan highlight */
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  width: 100%;
+}
+
+.schedule-box h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FF9F1C; /* primary accent - title/“25” text */
+}
+
+.schedule-box p {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #FFFFFF; /* keep description white */
+}
+
+.schedule-box h3 {
+  margin: 5px 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #FFD700; /* secondary accent now applied to date */
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    background-position: top;
+  }
+
+  .top-nav {
+    padding: 10px;
+  }
+
+  .heading-img {
+    margin-top: 60px;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .btn-arrow {
+    font-size: 1.2rem;
+  }
+
+  #day-label {
+    font-size: 1.3rem;
+  }
+
+  .heading-container {
+    margin: 16px 0;
+  }
+
+  .schedule-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .schedule-box h3 {
+    font-size: 1rem;
+  }
+
+  .schedule-box p {
+    font-size: 0.95rem;
+  }
 }

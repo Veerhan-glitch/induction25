@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Induction Schedule</title>
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Teachers&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -34,28 +40,30 @@
         >
       </div>
     </header>
-<img id="laptopImg" src="laptop.png" alt="Induction Schedule" class="full-image" style="display:block; width:100%;" />
-<img id="phoneImg" src="phone.png" alt="Induction Schedule" class="full-image" style="display:none; width:100%;" />
 
-<script>
-  function toggleImages() {
-    if (window.innerWidth <= 1025) {
-      document.getElementById("laptopImg").style.display = "none";
-      document.getElementById("phoneImg").style.display = "block";
-    } else {
-      document.getElementById("laptopImg").style.display = "block";
-      document.getElementById("phoneImg").style.display = "none";
-    }
-  }
+    
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <button id="prev">
+      <span class="btn-text">Prev</span>
+      <span class="btn-arrow">←</span>
+    </button>
+    <div id="day-label">Day 1 (18-07-2025)</div>
+    <button id="next">
+      <span class="btn-text">Next</span>
+      <span class="btn-arrow">→</span>
+    </button>
+  </div>
 
-  // Run on page load
-  toggleImages();
+  <!-- Heading Image -->
+  <div class="heading-container">
+    <img src="IMAGES/heding.png" alt="Heading" class="heading-img" />
+  </div>
 
-  // Run on window resize
-  window.addEventListener("resize", toggleImages);
-</script>
-
-
+  <!-- Schedule Content -->
+  <div class="schedule-container">
+    <!-- Boxes will be inserted dynamically via JS -->
+  </div>
       <footer class="footer">
       <div class="footer-content">
         <div class="footer-image">
@@ -127,5 +135,6 @@
         </div>
       </div>
     </footer>
+  <script src="script.js"></script>
 </body>
 </html>
