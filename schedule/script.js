@@ -11,9 +11,10 @@ function updateNavigation() {
 
   // Update center label
   const dayInfo = daysData[currentDay - 1];
-  document.getElementById("day-label").innerText = dayInfo
-    ? `Day ${currentDay} (${dayInfo.date})`
-    : `Day ${currentDay}`;
+document.getElementById("day-label").innerText = dayInfo?.date?.trim()
+  ? `Day ${currentDay} (${dayInfo.date})`
+  : `Day ${currentDay}`;
+
 
   // Keep buttons in layout but hide visually
   const prevBtn = document.getElementById("prev");
@@ -59,11 +60,24 @@ async function fetchSchedule() {
       grouped[day].events.forEach(evt => {
         const box = document.createElement("div");
         box.className = "schedule-box";
-        box.innerHTML = `
-          <h2>${evt.Title}</h2>
-          <p>${evt.Description || ""}</p>
-          <h3>${evt["Start Time"]} - ${evt["End Time"]}</h3>
-        `;
+let html = "";
+
+if (evt.Title?.trim()) {
+  html += `<h2>${evt.Title}</h2>`;
+}
+if (evt.Description?.trim()) {
+  html += `<p>${evt.Description}</p>`;
+}
+
+const start = evt["Start Time"]?.trim();
+const end = evt["End Time"]?.trim();
+
+if (start || end) {
+  html += `<h3>${start || ""}${start && end ? " - " : ""}${end || ""}</h3>`;
+}
+
+box.innerHTML = html;
+
         outer.appendChild(box);
       });
 
