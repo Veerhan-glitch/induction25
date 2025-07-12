@@ -846,9 +846,10 @@ height: auto;
   word-break: break-word;
   flex: 1;
 }
-.footer-contact .phone-number {
-  /* white-space: nowrap; keeps whole phone number on one line */
+
+
+@media (max-width: 680px) {
+    .logo {
+    height: 45px;
+  }
 }
-
-
-
