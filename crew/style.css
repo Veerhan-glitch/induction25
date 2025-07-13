@@ -103,3 +103,149 @@ body {
 #meet-the-crew-section {
   position: relative;
 }
+
+/* === SA OFFICE SECTION === */
+
+#sa-office-section {
+  padding-top: 70px; /* space for site header */
+  text-align: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Heading image */
+.sa-heading-image {
+  max-width: 90%;
+  height: auto;
+  max-height: 10vh;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Wrapper containing arrows + scroll container */
+.sa-scroll-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Scrollable container */
+.sa-scroll-container {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.sa-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Scrollable image */
+.sa-scroll-image {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+  display: inline-block;
+  object-fit: contain;
+  scroll-snap-align: center;
+  padding: 0 10px;
+}
+
+/* Arrows */
+.scroll-arrow-sa {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: static;
+  margin: 10px;
+}
+
+.scroll-arrow-sa:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.scroll-arrow-sa.left,
+.scroll-arrow-sa.right {
+  /* left/right classes preserved for future targeting */
+}
+
+/* === RESPONSIVE (below 768px) === */
+@media (max-width: 768px) {
+  .sa-heading-image {
+    max-width: 80%;
+    max-height: 10vh;
+  }
+
+  .sa-scroll-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sa-scroll-container {
+    width: 100%;
+  }
+
+  .sa-scroll-image {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .scroll-arrow-sa {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    margin: 6px;
+  }
+}
+.scroll-arrow-sa {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Specific positions */
+.scroll-arrow-sa.left {
+  left: 10px;
+}
+
+.scroll-arrow-sa.right {
+  right: 10px;
+}
+
+/* Make sure the parent is relative */
+.crew-scroll-container {
+  position: relative;
+}

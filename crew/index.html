@@ -35,16 +35,25 @@
       </div>
     </header>
 
+    <section id="sa-office-section">
+  <img src="./Images/SA OFFICE.png" alt="sa office Heading" class="sa-heading-image" />
+  <div class="sa-scroll-wrapper">
+    <div class="sa-scroll-container">
+      <img src="Images/SA.png" alt="SA OFFICE" class="sa-scroll-image" />
+    </div>
+  </div>
+</section>
 
 <section id="meet-the-crew-section">
   <img src="./Images/MEET THE CREW.png" alt="Meet the crew Heading" class="crew-heading-image" />
+      <button class="scroll-arrow-sa left">&#10094;</button>
+
   <div class="crew-scroll-container">
     <img src="Images/CREWWWW.png" alt="Meet the crew" class="crew-scroll-image" />
   </div>
-</section>
-<button class="scroll-arrow left">&#10094;</button>
-<button class="scroll-arrow right">&#10095;</button>
+      <button class="scroll-arrow-sa right">&#10095;</button>
 
+</section>
 
       <footer class="footer">
       <div class="footer-content">
@@ -117,13 +126,11 @@
         </div>
       </div>
     </footer>
-    <script>
+<script>
 window.addEventListener('DOMContentLoaded', () => {
   const scrollContainer = document.querySelector('.crew-scroll-container');
-
-
-  const leftBtn = document.querySelector('.scroll-arrow.left');
-  const rightBtn = document.querySelector('.scroll-arrow.right');
+  const leftBtn = document.querySelector('#meet-the-crew-section .scroll-arrow-sa.left');
+  const rightBtn = document.querySelector('#meet-the-crew-section .scroll-arrow-sa.right');
 
   const scrollAmount = 470;
 
@@ -136,6 +143,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
 
 </body>
 </html>
