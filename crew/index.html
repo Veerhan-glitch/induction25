@@ -35,13 +35,13 @@
       </div>
     </header>
 
-    <section id="sa-office-section">
+<section id="sa-office-section">
   <img src="./Images/SA OFFICE.png" alt="sa office Heading" class="sa-heading-image" />
-  <div class="sa-scroll-wrapper">
-    <div class="sa-scroll-container">
-      <img src="Images/SA.png" alt="SA OFFICE" class="sa-scroll-image" />
-    </div>
+  <button class="scroll-arrow-sa left">&#10094;</button>
+  <div class="sa-scroll-container">
+    <img src="Images/SA.png" alt="SA OFFICE" class="sa-scroll-image" />
   </div>
+  <button class="scroll-arrow-sa right">&#10095;</button>
 </section>
 
 <section id="meet-the-crew-section">
@@ -126,23 +126,34 @@
         </div>
       </div>
     </footer>
-<script>
+    <script>
 window.addEventListener('DOMContentLoaded', () => {
-  const scrollContainer = document.querySelector('.crew-scroll-container');
-  const leftBtn = document.querySelector('#meet-the-crew-section .scroll-arrow-sa.left');
-  const rightBtn = document.querySelector('#meet-the-crew-section .scroll-arrow-sa.right');
+  // Crew Section
+  const crewScroll = document.querySelector('.crew-scroll-container');
+  const crewLeft = document.querySelector('#meet-the-crew-section .scroll-arrow-sa.left');
+  const crewRight = document.querySelector('#meet-the-crew-section .scroll-arrow-sa.right');
 
-  const scrollAmount = 470;
-
-  leftBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  crewLeft.addEventListener('click', () => {
+    crewScroll.scrollBy({ left: -470, behavior: 'smooth' });
+  });
+  crewRight.addEventListener('click', () => {
+    crewScroll.scrollBy({ left: 470, behavior: 'smooth' });
   });
 
-  rightBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  // SA Office Section
+  const saScroll = document.querySelector('.sa-scroll-container');
+  const saLeft = document.querySelector('#sa-office-section .scroll-arrow-sa.left');
+  const saRight = document.querySelector('#sa-office-section .scroll-arrow-sa.right');
+
+  saLeft.addEventListener('click', () => {
+    saScroll.scrollBy({ left: -500, behavior: 'smooth' });
+  });
+  saRight.addEventListener('click', () => {
+    saScroll.scrollBy({ left: 500, behavior: 'smooth' });
   });
 });
 </script>
+
 
 
 </body>

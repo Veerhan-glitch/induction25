@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 /* Heading image */
@@ -38,6 +39,8 @@ body {
   width: 100%;
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
+  scroll-snap-type: x mandatory;
+  position: relative;
 }
 
 .crew-scroll-container::-webkit-scrollbar {
@@ -50,27 +53,11 @@ body {
   width: auto;
   display: inline-block;
   object-fit: contain;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .crew-heading-image {
-    max-width: 80%;
-    max-height: 10vh;
-  }
-
-  .crew-scroll-image {
-    height: 100%;
-  }
-}
-.crew-scroll-container {
-  scroll-snap-type: x mandatory;
-}
-
-.crew-scroll-image {
   scroll-snap-align: center;
   padding: 0 10px; /* spacing between images */
 }
+
+/* Arrows */
 .scroll-arrow {
   position: absolute;
   top: 50%;
@@ -99,23 +86,28 @@ body {
   right: 10px;
 }
 
-/* Make sure the section is relatively positioned */
-#meet-the-crew-section {
-  position: relative;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .crew-heading-image {
+    max-width: 80%;
+    max-height: 10vh;
+  }
+
+  .crew-scroll-image {
+    height: 100%;
+  }
 }
 
-/* === SA OFFICE SECTION === */
+/* === SA OFFICE SECTION—EXACT COPY OF CREW ==== */
 
 #sa-office-section {
   padding-top: 70px; /* space for site header */
   text-align: center;
-  height: auto;
+  height: calc(100vh - 60px); /* fill rest of screen */
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* Heading image */
@@ -128,99 +120,34 @@ body {
   display: block;
 }
 
-/* Wrapper containing arrows + scroll container */
-.sa-scroll-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 10px;
-  gap: 10px;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Scrollable container */
+/* Scroll container */
 .sa-scroll-container {
   flex: 1;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   width: 100%;
-  scroll-snap-type: x mandatory;
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
+  scroll-snap-type: x mandatory;
+  position: relative;
 }
 
 .sa-scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;  /* Chrome/Safari */
 }
 
 /* Scrollable image */
 .sa-scroll-image {
   height: 100%;
-  max-width: 100%;
   width: auto;
   display: inline-block;
   object-fit: contain;
   scroll-snap-align: center;
-  padding: 0 10px;
+  padding: 0 10px; /* spacing between images */
 }
 
 /* Arrows */
-.scroll-arrow-sa {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: static;
-  margin: 10px;
-}
-
-.scroll-arrow-sa:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.scroll-arrow-sa.left,
-.scroll-arrow-sa.right {
-  /* left/right classes preserved for future targeting */
-}
-
-/* === RESPONSIVE (below 768px) === */
-@media (max-width: 768px) {
-  .sa-heading-image {
-    max-width: 80%;
-    max-height: 10vh;
-  }
-
-  .sa-scroll-wrapper {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .sa-scroll-container {
-    width: 100%;
-  }
-
-  .sa-scroll-image {
-    height: auto;
-    max-width: 100%;
-  }
-
-  .scroll-arrow-sa {
-    width: 36px;
-    height: 36px;
-    font-size: 20px;
-    margin: 6px;
-  }
-}
 .scroll-arrow-sa {
   position: absolute;
   top: 50%;
@@ -233,10 +160,14 @@ body {
   height: 40px;
   font-size: 24px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 2;
+  transition: background-color 0.3s ease;
 }
 
-/* Specific positions */
+.scroll-arrow-sa:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .scroll-arrow-sa.left {
   left: 10px;
 }
@@ -245,7 +176,20 @@ body {
   right: 10px;
 }
 
-/* Make sure the parent is relative */
-.crew-scroll-container {
-  position: relative;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .sa-heading-image {
+    max-width: 80%;
+    max-height: 10vh;
+  }
+
+  .sa-scroll-image {
+    height: 100%;
+  }
+
+  .scroll-arrow-sa {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
 }
